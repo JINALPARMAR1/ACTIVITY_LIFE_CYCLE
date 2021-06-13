@@ -1,0 +1,62 @@
+package com.example.activitylifecycle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+   TextView tv1;
+   String text;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        tv1=(TextView)findViewById(R.id.txt1);
+         text = tv1.getText().toString();
+         text = text+"\nInside onCreate Method";
+        tv1.setText(text);
+    }
+    public void onStart()
+    {
+        super.onStart();
+        text = tv1.getText().toString();
+        text = text+"\nInside onStart Method";
+        tv1.setText(text);
+    }
+    public void onRestart()
+    {
+        super.onRestart();
+        text = tv1.getText().toString();
+        text = text+"\nInside onRestart Method";
+        tv1.setText(text);
+    }
+    public void onResume()
+    {
+        super.onResume();
+        text = tv1.getText().toString();
+        text = text+"\nInside onResume Method";
+        tv1.setText(text);
+    }
+    public void onPause()
+    {
+        super.onPause();
+        text = tv1.getText().toString();
+        text = text+"\nInside onPause Method";
+        tv1.setText(text);
+    }
+    public void onStop()
+    {
+        super.onStop();
+        text = tv1.getText().toString();
+        text = text+"\nInside onStop Method";
+        tv1.setText(text);
+    }public void onDestroy()
+    {
+        super.onDestroy();
+        text = tv1.getText().toString();
+        text = text+"\nInside onDestroy Method";
+        tv1.setText(text);
+    }
+
+}
